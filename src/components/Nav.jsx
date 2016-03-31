@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 export default class Nav extends Component {
   constructor(props) {
@@ -6,16 +7,24 @@ export default class Nav extends Component {
   }
   render() {
     return (
-      <nav class="navbar">
-        {/* Left Side */}
-        <div class="navbar-left">
-          <div class="navbar-item">
-            <p class="subtitle is-5">
-              <strong>123</strong> posts
-            </p>
+      <div className="container">
+        <nav className="navbar">
+          <div className="navbar-left">
+            <div className="navbar-item">
+              <p className="subtitle is-5">
+                <h1>PGSLP</h1>
+              </p>
+            </div>
           </div>
-        </div>
-      </nav>
+
+          <div className="navbar-right">
+            <p className="navbar-item"><Link to={'/dashboard'}>Today</Link></p>
+            <p className="navbar-item"><Link to={'/history'}>History</Link></p>
+            <p className="navbar-item"><Link to={'/charts'}>Progress</Link></p>
+            <p className="navbar-item">User</p>
+          </div>
+        </nav>
+      </div>
     );
   }
-};
+}

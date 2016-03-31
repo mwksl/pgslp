@@ -1,11 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-
-import App from './containers/App';
+import routes from './routes';
 
 require('../node_modules/bulma/css/bulma.min.css');
 
 ReactDOM.render(
-  <App />,
+  routes,
   document.getElementById('app')
 );
